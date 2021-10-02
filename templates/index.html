@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <title>Text Utilizer</title>
+  </head>
+  <body>
+      <!-- Navigation Bar -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">TextUtils.in</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="/">Home</a>
+              <a class="nav-link" href="#">About</a>
+              <a class="nav-link" href="#">Contact us</a>
+            </div>
+          </div>
+            <!-- Page Form -->
+
+          
+      <form class="d-flex" action='/analyze', method='POST' >{% csrf_token %}
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+          
+        </div>
+
+
+      </nav>
+
+
+
+  <div class="alert alert-primary alert-dismissible fade show" role="alert">
+  <strong>Welcome to the TextUtils.</strong> You can do anything in TextUtils.
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+
+  </div>
+
+      <!-- Textarea of -->
+  <div class="container">
+    <div class="mb-3">
+      <label for="exampleFormControlTextarea1" class="form-label">Enter your text here.</label>
+      <textarea class="form-control" name="text" id="exampleFormControlTextarea1" rows="8"></textarea>
+    </div>
+
+
+
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" name="removepunc" id="flexSwitchCheckDefault1">
+      <label class="form-check-label" for="flexSwitchCheckDefault1">Remove Punctuations</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" name="fullcaps" id="flexSwitchCheckDefault2">
+      <label class="form-check-label" for="flexSwitchCheckDefault2">All Capitlized</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" name="newlineremover" id="flexSwitchCheckDefault3">
+      <label class="form-check-label" for="flexSwitchCheckDefault3">New line Remover</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" name="spaceremover" id="flexSwitchCheckDefault4">
+      <label class="form-check-label" for="flexSwitchCheckDefault4">Space Remover</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" name="charcount" id="flexSwitchCheckDefault5">
+      <label class="form-check-label" for="flexSwitchCheckDefault5">Charcount</label>
+    </div>
+    <button type="submit" class="btn btn-primary mt-2">Analyze Text</button>
+    <!-- <input type="checkbox", name="removepunc">Remove Punctuations <br> -->
+        <!-- <input type="checkbox", name="fullcaps">All Captilized <br> -->
+        <!-- <input type="checkbox", name="newlineremover">New line Remover <br> -->
+        <!-- <input type="checkbox", name="spaceremover">Space Remover <br> -->
+        <!-- <input type="checkbox", name="charcount">Charcount <br> -->
+    <!-- <button type="submit">Submit</button> -->
+    
+  </div>  
+  </div>
+  </form>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
