@@ -56,7 +56,7 @@ def analyze(request):
         sakib={'purpose':'charcount', 'analyzed_text': writetext}
         
     if charcount =='off' and spaceremover =='off' and newlineremover =='off' and fullcaps =='off' and removepunc =='off':
-        return HttpResponse("Please Select Atleast One Option.")
-
+            return render(request,'Error.html')
+            
     return render(request,'analyze.html',sakib)
     
